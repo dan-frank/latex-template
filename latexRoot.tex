@@ -1,0 +1,50 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{siunitx}
+\usepackage{relsize}
+\usepackage{graphicx}
+\usepackage{adjustbox}
+\usepackage[dash,dot]{dashundergaps}
+
+% Doc stats
+\title{Exercise 2}
+\author{Daniel Lucas}
+\date{16\ts{th} January 2021}
+
+% Creates abbreviation '\ts' for command '\textsuperscript'
+\newcommand{\ts}{\textsuperscript}
+
+% Removes line indent on new paragraphs and replaces with line break
+\usepackage[parfill]{parskip}
+
+% Allows for hyper links
+\usepackage{hyperref}
+
+% Code block
+\usepackage{listings}
+
+% Images
+\usepackage{graphicx}
+
+\begin{document}
+
+\include{root/titlepage}
+\newpage
+
+\tableofcontents
+% Hides page number
+\thispagestyle{empty}
+\newpage
+
+% Set's current page number to 1
+\setcounter{page}{1}
+
+% ============================================= %
+
+\input{parts/part1} % \include to separate each import by page
+
+% ============================================= %
+
+\end{document}
