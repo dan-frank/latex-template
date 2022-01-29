@@ -16,6 +16,27 @@
 \author{\studentname}
 \date{\submitdate}
 
+%% Colours
+\usepackage{xcolor}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\definecolor{grayDark}{rgb}{0.85,0.85,0.85}
+\definecolor{redLight}{rgb}{0.89,0.15,0.21}
+\definecolor{greenLight}{rgb}{0.31,0.78,0.47}
+\definecolor{blueLight}{rgb}{0.2,0.6,0.86}
+\definecolor{gray75}{gray}{0.75}
+
+% Chapter styling
+%% Simple
+\usepackage{titlesec, blindtext}
+\newcommand{\hsp}{\hspace{20pt}}
+\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{gray75}{|}\hsp}{0pt}{\Huge\bfseries}
+
+%% Fancy chapter
+%\usepackage[Bjornstrup]{fncychap} % Options: Sonny, Lenny, Glenn, Conny, Rejne, Bjarne, Bjornstrup
+
 % Basic packages
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -57,17 +78,6 @@
 
 % Figures
 \usepackage{rotating}
-
-% Colours
-\usepackage{xcolor}
-
-\definecolor{dkgreen}{rgb}{0,0.6,0}
-\definecolor{gray}{rgb}{0.5,0.5,0.5}
-\definecolor{mauve}{rgb}{0.58,0,0.82}
-\definecolor{grayDark}{rgb}{0.85,0.85,0.85}
-\definecolor{redLight}{rgb}{0.89,0.15,0.21}
-\definecolor{greenLight}{rgb}{0.31,0.78,0.47}
-\definecolor{blueLight}{rgb}{0.2,0.6,0.86}
 
 % Math-mode strikeout
 \usepackage{cancel}
