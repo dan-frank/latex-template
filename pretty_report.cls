@@ -3,9 +3,9 @@
 
 % Document
 %% Doc vars
-\title{\projecttitle}
-\author{\studentname}
-\date{\submitdate}
+\title{\projectTitle}
+\author{\studentName}
+\date{\submitDate}
 %% Colours
 \usepackage{xcolor}
 \definecolor{dkgreen}{rgb}{0,0.6,0}
@@ -34,12 +34,12 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhead[CO]{}
-\fancyhead[LO]{\small{\projecttitle}}
-\fancyhead[RO]{\small{\studentname}}
+\fancyhead[LO]{\small{\projectTitle}}
+\fancyhead[RO]{\small{\studentName}}
 \renewcommand{\headrulewidth}{0.4pt}
 \fancyfoot[CO]{}
 \fancyfoot[RO]{\small\thepage~of~\pageref{endpage}}
-\fancyfoot[LO]{\coursecode:\ \coursetitle}
+\fancyfoot[LO]{\courseCode:\ \courseTitle}
 \renewcommand{\footrulewidth}{0.4pt}
 \usepackage{etoolbox}
 \patchcmd{\chapter}{\thispagestyle{plain}}{\thispagestyle{fancy}}{}{}
@@ -167,15 +167,15 @@
 		\vspace{1cm}
 		
 		\begin{center}
-			{\LARGE \projecttitle}
+			{\huge\projectTitle}
 			
 			\vspace{0.4cm}
 			
-			{\large \studentname}
+			{\Large\studentName}
 			
-			\vspace{0.4cm}
+			\vspace{0.25cm}
 			
-			{\large \submitdate}
+			{\large \submitDate}
 		\end{center}
 	
 		\vfill
@@ -183,21 +183,21 @@
 		\begin{center}
 			An assignment submitted in part fulfilment of the degree of
 		
-			{\large BSc (Hons) in Computer Science}
+			{\large\degree}
 		
 			\vspace{0.4cm}
 		
 			\supervisorTitle: \supervisor
 		
-			\vspace{0.4cm}
+			\vspace{0.1cm}
 		
-			\coursecode:\ \coursetitle\\
+			\courseCode:\ \courseTitle\\
  		
- 			\vspace{0.4cm}
+ 			\vspace{0.6cm}
  		
-	 		Royal Holloway, University of London\\
+	 		\institution
 	
- 			\vspace{0.8cm}	
+ 			\vspace{0.6cm}	
 	
  			\begin{center}
  				\includegraphics[scale=1]{./images/root/university.png}
