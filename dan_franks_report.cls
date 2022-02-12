@@ -21,7 +21,7 @@
 % Chapter styling
 %% Simple
 \usepackage{titlesec, blindtext}
-\newcommand{\hsp}{\hspace{20pt}}
+\newcommand{\hsp}{\hspace{15pt}}
 \titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{grayDark}{|}\hsp}{0pt}{\Huge\bfseries}
 
 %% Fancy chapter
