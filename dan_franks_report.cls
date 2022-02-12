@@ -24,9 +24,6 @@
 \newcommand{\hsp}{\hspace{15pt}}
 \titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{grayDark}{|}\hsp}{0pt}{\Huge\bfseries}
 
-%% Fancy chapter
-%\usepackage[Bjornstrup]{fncychap} % Options: Sonny, Lenny, Glenn, Conny, Rejne, Bjarne, Bjornstrup
-
 % Basic packages
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
