@@ -1,14 +1,13 @@
 \ProvidesClass{pretty_report}
 \LoadClass[11pt, titlepage]{report}
 
+% Document
 %% Doc vars
 \title{\projecttitle}
 \author{\studentname}
 \date{\submitdate}
-
 %% Colours
 \usepackage{xcolor}
-
 \definecolor{dkgreen}{rgb}{0,0.6,0}
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
 \definecolor{mauve}{rgb}{0.58,0,0.82}
@@ -19,7 +18,6 @@
 \definecolor{gray75}{gray}{0.75}
 
 % Chapter styling
-%% Simple
 \usepackage{titlesec, blindtext}
 \newcommand{\hsp}{\hspace{15pt}}
 \titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{grayDark}{|}\hsp}{0pt}{\Huge\bfseries}
@@ -31,7 +29,8 @@
 \usepackage{amssymb}
 \usepackage{siunitx}
 
-% Fancy Header
+% Document formatting
+%% Header and footer
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhead[CO]{}
@@ -42,39 +41,57 @@
 \fancyfoot[RO]{\small\thepage~of~\pageref{endpage}}
 \fancyfoot[LO]{\coursecode:\ \coursetitle}
 \renewcommand{\footrulewidth}{0.4pt}
-
 \usepackage{etoolbox}
 \patchcmd{\chapter}{\thispagestyle{plain}}{\thispagestyle{fancy}}{}{}
-
-% Section depth
-\setcounter{secnumdepth}{3}
-\setcounter{tocdepth}{3}
-
-% Date
+%% Replaces new paragraph line indent with line break
+\usepackage[parfill]{parskip}
+%% Hyper links
+\usepackage{hyperref}
+%\usepackage{url}
+%% Date
 \usepackage[UKenglish]{babel}
 \usepackage[nodayofweek, level]{datetime}
 % \selectlanguage{UKenglish}
 
-% Allows to create box outside of text area
+% Layout
+%% Sets section depth
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+%% Allows to create box outside of text area
 \usepackage{adjustbox}
 
-% Allows variable with table columns
+% Tables
+%% Allows variable width table columns
 \usepackage{tabularx}
-% Allows cell formatting such as newline
+%% Allows cell formatting such as newline
 \usepackage{makecell}
 
 % Figures
 \usepackage{rotating}
+%% Images
+\usepackage{graphicx}
+%% Center figure ignoring textwidth
+\makeatletter
+\newcommand*{\centerfloat}{%
+  \parindent \z@
+  \leftskip \z@ \@plus 1fil \@minus \textwidth
+  \rightskip\leftskip
+  \parfillskip \z@skip}
+\makeatother
+%% More figure captioning functionality
+\usepackage[center]{caption}
+\usepackage{subcaption}
 
-% Math-mode strikeout
+% Math
+%% Math-mode strikeout
 \usepackage{cancel}
 \newcommand\hcancel[2][black]{\setbox0=\hbox{$#2$}%
 \rlap{\raisebox{.45\ht0}{\textcolor{#1}{\rule{\wd0}{1pt}}}}#2} 
 
-% Code blocks
+% Code styling
 \usepackage{listings}
-
-\lstdefinestyle{JavaStyle}{
+%% Block
+\lstdefinestyle{Java}{
   language=Java,
   basicstyle=\ttfamily\small,
   numbers=left,
@@ -99,13 +116,14 @@
   morekeywords={*,...},
   belowskip=0em,
 }
- 
-\lstdefinestyle{JavaStyleNormal}{
+%% Inline style
+\lstdefinestyle{JavaInline}{
   language=Java,                
   basicstyle=\ttfamily
 }
 
-% Tikz for graphs
+% Diagrams
+%% Tikz for graphs
 \usepackage{tikz}
 \usetikzlibrary{arrows,positioning}
 \tikzset{
@@ -126,8 +144,7 @@
            shorten <=2pt,
            shorten >=2pt,}
 }
-
-% Naughts and crosses tree
+%% Naughts and crosses tree
 \usepackage{forest,calc}
 \forestset{
     make tab/.style args={#1:#2:#3/#4:#5:#6/#7:#8:#9}{%
@@ -139,35 +156,8 @@
     label position r/.initial=right,
     label position b/.initial=below
 }
-
-% Binary Trees
+%% Binary Trees
 % \usepackage[edges]{forest}
-
-% Creates abbreviation '\ts' for command '\textsuperscript'
-\newcommand{\ts}{\textsuperscript}
-
-% Removes line indent on new paragraphs and replaces with line break
-\usepackage[parfill]{parskip}
-
-% Allows for hyper links
-\usepackage{hyperref}
-%\usepackage{url}
-
-% Images
-\usepackage{graphicx}
-
-% Center figure ignoring textwidth
-\makeatletter
-\newcommand*{\centerfloat}{%
-  \parindent \z@
-  \leftskip \z@ \@plus 1fil \@minus \textwidth
-  \rightskip\leftskip
-  \parfillskip \z@skip}
-\makeatother
-
-% More figure captioning functionality
-\usepackage[center]{caption}
-\usepackage{subcaption}
 
 % Custom Title Page
 \renewcommand{\maketitle}{
@@ -218,3 +208,7 @@
 		\thispagestyle{empty}
 	\end{titlepage}
 }
+
+% Custom commands
+%% Creates abbreviation '\ts' for command '\textsuperscript'
+\newcommand{\ts}{\textsuperscript}
