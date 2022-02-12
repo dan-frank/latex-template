@@ -22,7 +22,7 @@
 %% Simple
 \usepackage{titlesec, blindtext}
 \newcommand{\hsp}{\hspace{20pt}}
-\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{gray75}{|}\hsp}{0pt}{\Huge\bfseries}
+\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{grayDark}{|}\hsp}{0pt}{\Huge\bfseries}
 
 %% Fancy chapter
 %\usepackage[Bjornstrup]{fncychap} % Options: Sonny, Lenny, Glenn, Conny, Rejne, Bjarne, Bjornstrup
