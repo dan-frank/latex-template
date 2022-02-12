@@ -1,4 +1,4 @@
-\ProvidesClass{dan_franks_report}
+\ProvidesClass{pretty_report}
 \LoadClass[11pt, titlepage]{report}
 
 %% Doc vars
