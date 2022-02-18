@@ -33,16 +33,28 @@
 %% Header and footer
 \usepackage{fancyhdr}
 \pagestyle{fancy}
-\fancyhead[CO]{}
-\fancyhead[LO]{\small{\projectTitle}}
-\fancyhead[RO]{\small{\studentName}}
-\renewcommand{\headrulewidth}{0.4pt}
-\fancyfoot[CO]{}
-\fancyfoot[RO]{\small\thepage~of~\pageref{endpage}}
-\fancyfoot[LO]{\courseCode:\ \courseTitle}
-\renewcommand{\footrulewidth}{0.4pt}
-\usepackage{etoolbox}
-\patchcmd{\chapter}{\thispagestyle{plain}}{\thispagestyle{fancy}}{}{}
+    \fancypagestyle{front}{
+    \fancyhf{}
+    \renewcommand{\headrulewidth}{0pt}
+    \cfoot{}
+    \renewcommand{\footrulewidth}{0pt}
+}
+\fancypagestyle{main}{
+    \fancyhead[CO]{}
+    \fancyhead[LO]{\small{\projectTitle}}
+    \fancyhead[RO]{\small{\studentName}}
+    \renewcommand{\headrulewidth}{0.4pt}
+    \fancyfoot[CO]{}
+    \fancyfoot[RO]{\small\thepage~of~\pageref{endpage}}
+    \fancyfoot[LO]{\courseCode:\ \courseTitle}
+    \renewcommand{\footrulewidth}{0.4pt}
+}
+\makeatletter
+  \newcommand\frontpagestyle{\cleardoublepage\pagestyle{front}\let\ps@plain\ps@front}
+  \newcommand\mainpagestyle{\cleardoublepage\pagestyle{main}\let\ps@plain\ps@main}
+\makeatother
+% \usepackage{etoolbox}
+% \patchcmd{\chapter}{\thispagestyle{plain}}{\thispagestyle{fancy}}{}{}
 %% Replaces new paragraph line indent with line break
 \usepackage[parfill]{parskip}
 %% Hyper links
