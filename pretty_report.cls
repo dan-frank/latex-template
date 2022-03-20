@@ -75,6 +75,7 @@
 % Tables
 %% Allows variable width table columns
 \usepackage{tabularx}
+\usepackage{ltablex}
 %% Allows cell formatting such as newline
 \usepackage{makecell}
 
@@ -104,34 +105,37 @@
 \usepackage{listings}
 %% Block
 \lstdefinestyle{Java}{
-  language=Java,
-  basicstyle=\ttfamily\small,
-  numbers=left,
-  numberstyle=\tiny\color{gray},
-  stepnumber=1,
-  numbersep=5pt,
-  backgroundcolor=\color{white},
-  showspaces=false,
-  showstringspaces=false,
-  showtabs=false,
-  frame=single,
-  rulecolor=\color{black},
-  tabsize=4,
-  captionpos=b,
-  breaklines=true,
-  breakatwhitespace=false,
-  title=\lstname,
-  keywordstyle=\color{blue},
-  commentstyle=\color{dkgreen},
-  stringstyle=\color{mauve},
-  escapeinside={\%*}{*)},
-  morekeywords={*,...},
-  belowskip=0em,
+    language=Java,
+    basicstyle=\ttfamily\small,
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    stepnumber=1,
+    numbersep=5pt,
+    backgroundcolor=\color{white},
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    frame=single,
+    rulecolor=\color{black},
+    tabsize=4,
+    captionpos=b,
+    breaklines=true,
+    breakatwhitespace=false,
+    title=\lstname,
+    keywordstyle=\color{blue},
+    commentstyle=\color{dkgreen},
+    stringstyle=\color{mauve},
+    escapeinside={\%*}{*)},
+    morekeywords={*,...},
+    belowskip=0em,
 }
 %% Inline style
 \lstdefinestyle{JavaInline}{
-  language=Java,                
-  basicstyle=\ttfamily
+    language=Java,                
+    basicstyle=\ttfamily,
+    breaklines=true,
+    breakatwhitespace=true,
+    frame=lines,
 }
 
 % Diagrams
